@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="instagram" translate="label" sortOrder="10">
+            <label>Instagram</label>
+        </tab>
+        <section id="instagram_section" translate="label" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Instagram</label>
+            <tab>instagram</tab>
+            <resource>Ovi_Instagram::instagram_config</resource>
+            <group id="instagram_general" translate="label" type="select" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="enable" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Select Yes to enable module on frontend.</comment>
+                </field>
+                <field id="client_id" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Client ID</label>
+                    <comment><![CDATA[Client ID data]]></comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="client_secret" translate="label comment" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Client Secret</label>
+                    <comment><![CDATA[Instagram Client Secret Data]]></comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="username" translate="label comment" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Username</label>
+                    <comment><![CDATA[Instagram Username Example: http://instagram.com/<b>username</b>]]></comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                    <validate>required-entry</validate>
+                </field>
+                <field id="redirect_url" translate="label comment" type="text" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Valid redirect URIs</label>
+                    <comment><![CDATA[Valid redirect URIs config sanbox]]></comment>
+                    <depends>
+                        <field id="enable">1</field>
+                    </depends>
+                    <validate>required-entry</validate>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

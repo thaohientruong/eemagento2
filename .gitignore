@@ -1,0 +1,10 @@
+/.idea
+/media/**
+/media/sap/
+!/media/.htaccess
+/var/**
+!/var/.htaccess
+/app/etc/local.xml
+n98-magerun.phar
+readfile.php
+PATCH_*

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="instagram_widget" class="Ovi\Instagram\Block\Widget\Instagram">
+        <label translate="true">Instagram Image Widget</label>
+        <description>Show list image from Instagram</description>
+        <parameters>
+            <parameter name="title" xsi:type="text" visible="true" required="true" sort_order="10" >
+                <label translate="true">Title</label>
+            </parameter>
+            <parameter name="description" xsi:type="text" visible="true" required="false" sort_order="20" >
+                <label translate="true">Description</label>
+            </parameter>
+            <parameter name="limit" xsi:type="text" visible="true" required="true" sort_order="30" >
+                <label translate="true">Limit Number</label>
+            </parameter>
+            <parameter name="hashtag" xsi:type="text" visible="true" required="true" sort_order="40" >
+                <label translate="true">Hashtag</label>
+            </parameter>
+        </parameters>
+    </widget> 
+</widgets>
